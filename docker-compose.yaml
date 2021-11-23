@@ -1,0 +1,32 @@
+version: "3"
+ 
+services:
+  mysql:
+    container_name: BD
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=inventario
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_USER=felipe
+      - MYSQL_PASSWORD=1234
+      - MYSQL_TCP_PORT=3306
+    volumes:
+      # Montamos un volumen para MySQL para no perder los datos de bd
+      - ./volumenes/mysql:/var/lib/mysql
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+  miservicio_php:
+    build: .
+    volumes:
+      # Montamos nuestra web desde fuera en el directorio web del contenedor
+      - ./miweb/:/var/www/html
+     # - ./config:/usr/local/etc/php                                                                             
+    image: 8.0-apache
+    ports:
+      - 80:80
+    links: 
+      - mysql
+volumes:
+  config: {}
