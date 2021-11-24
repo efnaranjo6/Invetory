@@ -16,7 +16,7 @@
 
             </div>
 
-            <button type="button" onclick="insert()" class="btn btn-primary btn-block mt-3">Save</button>
+            <button type="button" onclick="insert()" class="btn btn-primary btn-block mt-3"><i class="bi bi-device-hdd"></i> Save</button>
         </div>
 </form>
         <div class=" mt-5" id="trademarcktable">

@@ -10,3 +10,15 @@ function setvaluesTrade(id,name){
          $('#idTredemarktxt').val(id)               
         }, 1000);  
 }
+function setvaluesDepartam(id,name){
+    $('#exampleModal').modal('show')
+    $("#iconModal").removeClass('i').addClass('bi bi-boxes') 
+    $("#Modalgeneric").load( '../View/Parts/Modals/Departament.php')
+    $("#exampleModalLabel").text('Departament');
+    setTimeout(
+        function() 
+        {
+         $('#nameDepartamenttxt').val(name)
+         $('#idDepartamenttxt').val(id)               
+        }, 1000);  
+}

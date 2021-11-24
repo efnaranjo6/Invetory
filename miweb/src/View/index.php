@@ -184,6 +184,9 @@
     <script src="../Static/js/table.js"></script>
     <script src="../Static/js/genericajax.js"></script>
     <script src="../Static/js/data.js"></script>
+
+
+   
 </body>
 
 </html>

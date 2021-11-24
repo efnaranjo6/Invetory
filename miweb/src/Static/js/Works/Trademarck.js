@@ -32,7 +32,8 @@ function UpdateDelete(controller){
         $('#exampletrade').dataTable().fnClearTable();
         $('#exampletrade').dataTable().fnDestroy()
         $('#prosecution').val('4')
-        loadingdata(url);}
+        loadingdata(url);
+    }
         
 }
 
@@ -51,7 +52,7 @@ function insert(){
         $('#exampletrade').dataTable().fnClearTable();
         $('#exampletrade').dataTable().fnDestroy()
         $('#prosecution').val('4')
-         loadingdata(url);
+        loadingdata(url);
     }
 }
 function loadingdata(url){
@@ -71,11 +72,11 @@ function loadingdata(url){
                     var tr_str = "<tr>" +
                     "<td>"+ (i+1) + "</td>" +
                     "<td>"+ name + "</td>" +
-                     "<td><button data-toggle='modal' data-target='#exampleModal' type='button' class='btn btn-warning' onclick='"+onclicked+"' >Actions</button></td>" +
+                     "<td><button data-toggle='modal' data-target='#exampleModal' type='button' class='btn btn-warning' onclick='"+onclicked+"' ><i class='bi bi-tools pr-3'></i>Actions</button></td>" +
                     "</tr>";
                     $("#exampletrade tbody").append(tr_str);
                 }
-                  $('#exampletrade').DataTable({
+                  $('#exampletrade').DataTable({ 
                         "ordering": true,
                         "responsive": true,
                         "lengthChange": false

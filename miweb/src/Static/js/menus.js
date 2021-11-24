@@ -23,32 +23,34 @@ function Hidden(){
 }
 
 function active(activeA){
-  var active = activeA
-   var add= $('#'+active+'').removeClass('nav-link text-white').addClass('nav-link active')  
+  let active = activeA
+  let add= $('#'+active+'').removeClass('nav-link text-white').addClass('nav-link active')  
   switch (active) {
     case 'start': 
       add 
       $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
-      $('#gato').removeClass('nav-link active').addClass('nav-link text-white')      
+      $('#departament').removeClass('nav-link active').addClass('nav-link text-white')      
       break;  
     case 'trademarck': 
       add 
-      var url='../View/Works/Trademarck.php'
+      let url='../View/Works/Trademarck.php'
       $('#start').removeClass('nav-link active').addClass('nav-link text-white')
-      $('#gato').removeClass('nav-link active').addClass('nav-link text-white')    
+      $('#departament').removeClass('nav-link active').addClass('nav-link text-white')    
       loadpage(url)
     break; 
-  case 'gato':
+  case 'departament':
     add 
+    let urld='../View/Works/Departament.php'
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white')  
-    $('#start').removeClass('nav-link active').addClass('nav-link text-white')      
+    $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
+    loadpage(urld) 
     break;
   default:
     console.log('default');
 }
 }
 function loadpage(url){
-  $( "#selectionpage" ).load( url );
+  $("#selectionpage").load(url);
 }
 
 

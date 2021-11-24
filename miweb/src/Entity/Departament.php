@@ -13,14 +13,20 @@ class Departament{
     */
     private $id_departament;
     /**
-    * @ORM\Column(type="string")
+    * @ORM\Column(type="string", options={"default": "ACTIVE"})
+    *
     */
     private $state_departament;
     /**
     * @ORM\Column(type="string")
     */
     private $name_departament;
-    
+
+    public function __construct()
+    {
+        $this->state_departament= 'ACTIVE';
+    }
+
 
     /**
      * Get the value of id_departament

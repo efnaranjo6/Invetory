@@ -17,10 +17,10 @@
              </a>
          </li>
          <li>
-             <a href="#" id="gato" onclick="active('gato')" class=" nav-link text-white">
+             <a href="#" id="departament" onclick="active('departament')" class=" nav-link text-white">
                  <svg class="bi me-2" width="16" height="16">
                      <use xlink:href="#table" /></svg>
-                 Orders
+                  Departament
              </a>
          </li>
          <li>
