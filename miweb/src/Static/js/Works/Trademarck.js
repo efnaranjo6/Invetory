@@ -3,8 +3,13 @@
     let url	='../Controller/Trademark.php' 
     loadingdata(url);
 })()
+function cleartable(url){
+    $('#exampletrade').dataTable().fnClearTable()
+    $('#exampletrade').dataTable().fnDestroy()
+    $('#prosecution').val('4')
+    loadingdata(url)
+}
 function UpdateDelete(controller){
-   
     let nametrade = $('#nameTredemarktxt').val()   
     let idtrade  = $('#idTredemarktxt').val()   
     if (controller==='1'){
@@ -14,13 +19,7 @@ function UpdateDelete(controller){
          let url	='../Controller/Trademark.php'  
         let cadena	=$("#Trademarck").serialize() 
         ajax(url,cadena)
-        $('#exampletrade').dataTable().fnClearTable();
-        $('#exampletrade').dataTable().fnDestroy()
-        $('#prosecution').val('4')
-        loadingdata(url);
-        
-        
-
+        cleartable(url)       
     }else{
         $('#prosecution').val('5')   
         $('#idtrade').val(idtrade)
@@ -28,15 +27,9 @@ function UpdateDelete(controller){
         let url	='../Controller/Trademark.php'  
         let cadena	=$("#Trademarck").serialize() 
         ajax(url,cadena)
-       
-        $('#exampletrade').dataTable().fnClearTable();
-        $('#exampletrade').dataTable().fnDestroy()
-        $('#prosecution').val('4')
-        loadingdata(url);
+        cleartable(url)
     }
-        
 }
-
 function insert(){ 
     $('#alert').animate({
         opacity: 1,
@@ -49,10 +42,7 @@ function insert(){
         let url	='../Controller/Trademark.php'  
         let cadena	=$("#Trademarck").serialize() 
         ajax(url,cadena)
-        $('#exampletrade').dataTable().fnClearTable();
-        $('#exampletrade').dataTable().fnDestroy()
-        $('#prosecution').val('4')
-        loadingdata(url);
+        cleartable(url)
     }
 }
 function loadingdata(url){
@@ -72,7 +62,7 @@ function loadingdata(url){
                     var tr_str = "<tr>" +
                     "<td>"+ (i+1) + "</td>" +
                     "<td>"+ name + "</td>" +
-                     "<td><button data-toggle='modal' data-target='#exampleModal' type='button' class='btn btn-warning' onclick='"+onclicked+"' ><i class='bi bi-tools pr-3'></i>Actions</button></td>" +
+                     "<td><button data-toggle='modal' data-target='#exampleModal' type='button' class='btn btn-warning' onclick='"+onclicked+"' ><i class='bi bi-tools '></i> Actions</button></td>" +
                     "</tr>";
                     $("#exampletrade tbody").append(tr_str);
                 }

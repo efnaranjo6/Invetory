@@ -3,37 +3,33 @@
     let url	='../Controller/Departament.php' 
    loadingdata(url);
 })()
+function cleartable(url){
+    $('#exampleDepartament').dataTable().fnClearTable()
+    $('#exampleDepartament').dataTable().fnDestroy()
+    $('#prosecution').val('4')
+    loadingdata(url)
+}
 function UpdateDelete(controller){
     let nameDepartament= $('#nameDepartamenttxt').val()   
-    let idDepartament  = $('#idDepartamenttxt').val()   
+    let idDepartament  = $('#idDepartamenttxt').val()  
+    let url	='../Controller/Departament.php'     
     if (controller==='1'){
         $('#prosecution').val('3')
         $('#idDepartament').val(idDepartament)
         $('#nameDepartament').val('INACTIVE')
-        let url	='../Controller/Departament.php'  
-        let cadena	=$("#Departament").serialize() 
+        let cadena	=$("#Departament").serialize()  
         ajax(url,cadena)
-        $('#exampleDepartament').dataTable().fnClearTable();
-        $('#exampleDepartament').dataTable().fnDestroy()
-        $('#prosecution').val('4')
-        loadingdata(url);
+        cleartable(url)
     }else{
         $('#prosecution').val('5')   
         $('#idDepartament').val(idDepartament)
-        $('#nameDepartament').val(nameDepartament)
-        let url	='../Controller/Departament.php'  
-        let cadena	=$("#Departament").serialize() 
+        $('#nameDepartament').val(nameDepartament) 
+        let cadena	=$("#Departament").serialize()  
         ajax(url,cadena)
-        $('#exampleDepartament').dataTable().fnClearTable();
-        $('#exampleDepartament').dataTable().fnDestroy()
-        $('#prosecution').val('4')
-        loadingdata(url);
+        cleartable(url)
     }
 }
 function insert(){ 
-    $('#alert').animate({
-        opacity: 1,
-    },50)
     $('#prosecution').val('1')
     if($('#name').val()===""){
         alert('typing in name');
@@ -42,10 +38,7 @@ function insert(){
         let url	='../Controller/Departament.php'  
         let cadena	=$("#Departament").serialize() 
         ajax(url,cadena)
-        $('#exampleDepartament').dataTable().fnClearTable();
-        $('#exampleDepartament').dataTable().fnDestroy()
-        $('#prosecution').val('4')
-        loadingdata(url);
+        cleartable(url)
     }
 }
 function loadingdata(url){
@@ -65,7 +58,7 @@ function loadingdata(url){
                     var tr_str = "<tr>" +
                     "<td>"+ (i+1) + "</td>" +
                     "<td>"+ name + "</td>" +
-                     "<td><button data-toggle='modal' data-target='#exampleModal' type='button' class='btn btn-warning' onclick='"+onclicked+"' ><i class='bi bi-tools'></i>Actions</button></td>" +
+                     "<td><button data-toggle='modal' data-target='#exampleModal' type='button' class='btn btn-warning' onclick='"+onclicked+"' ><i class='bi bi-tools'></i> Actions</button></td>" +
                     "</tr>";
                     $("#exampleDepartament tbody").append(tr_str);
                 }

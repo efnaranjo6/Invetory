@@ -12,7 +12,7 @@ function setvaluesTrade(id,name){
 }
 function setvaluesDepartam(id,name){
     $('#exampleModal').modal('show')
-    $("#iconModal").removeClass('i').addClass('bi bi-boxes') 
+    $("#iconModal").removeClass('i').addClass('bi bi-columns-gap') 
     $("#Modalgeneric").load( '../View/Parts/Modals/Departament.php')
     $("#exampleModalLabel").text('Departament');
     setTimeout(

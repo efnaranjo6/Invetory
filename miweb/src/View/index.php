@@ -172,8 +172,6 @@
             </div>
         </div>
     </div>
-
-
     <script src="../Static/js/jquery.js"></script>
     <script src="../Static/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="../Static/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
@@ -184,9 +182,5 @@
     <script src="../Static/js/table.js"></script>
     <script src="../Static/js/genericajax.js"></script>
     <script src="../Static/js/data.js"></script>
-
-
-   
 </body>
-
 </html>

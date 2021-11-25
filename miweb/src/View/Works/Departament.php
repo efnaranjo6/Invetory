@@ -5,7 +5,7 @@
     <input type="hidden" id="nameDepartament" name="nameDepartament" />
     <input type="hidden" id="idDepartament" name="idDepartament" />
     <div class="row mb-4 ">
-        <h1><i class="bi bi-pc-display"></i> Departament</h1>
+        <h1><i class="bi bi-columns-gap"></i> Departament</h1>
         <hr>
         <div class="col-sm-5">
             <div class="form-outline">

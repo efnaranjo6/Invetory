@@ -12,14 +12,13 @@
          </li>
          <li>
              <a href="#" id="trademarck" onclick="active('trademarck')" class="nav-link text-white">
-                    <i class="bi bi-pc-display"></i>
+                    <i class="bi bi-pc-display me-2"></i>
                  Trademarck
              </a>
          </li>
          <li>
              <a href="#" id="departament" onclick="active('departament')" class=" nav-link text-white">
-                 <svg class="bi me-2" width="16" height="16">
-                     <use xlink:href="#table" /></svg>
+                 <i class="bi bi-columns-gap me-2"></i>
                   Departament
              </a>
          </li>
