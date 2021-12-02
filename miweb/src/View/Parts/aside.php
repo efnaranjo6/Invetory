@@ -23,10 +23,9 @@
              </a>
          </li>
          <li>
-             <a href="#" onclick="active('4')" class="nav-link text-white">
-                 <svg class="bi me-2" width="16" height="16">
-                     <use xlink:href="#grid" /></svg>
-                 Products
+             <a href="#" id="person" onclick="active('person')" class="nav-link text-white">
+                <i class="bi bi-person-lines-fill me-2"></i>
+                 person
              </a>
          </li>
          <li>

@@ -1,14 +1,17 @@
 <?php
 
-
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\UniqueConstraint;
 
 
 /**
 * @ORM\Entity
-* @ORM\Table(name="Person")
+* @ORM\Table(name="Person",uniqueConstraints={
+* @UniqueConstraint(name="unique_name",columns={"codeid_person"})
+* }))
 */
 class Person {
 /**
@@ -28,6 +31,14 @@ private $lastname_person;
 /**
 * @ORM\Column(type="string")
 */
+private $codeid_person;
+/**
+* @ORM\Column(type="string")
+*/
+private $dateborn_person;
+/**
+* @ORM\Column(type="string",options={"default": "ACTIVE"})
+*/
 private $state_person;
 /**
 * Unidirectional - Many-To-One
@@ -40,6 +51,11 @@ private $Departament;
 /**
  * Get the value of id_person
  */
+public function __construct()
+{
+$this->state_person= 'ACTIVE';
+$this->Departament=new ArrayCollection();
+}
 public function getIdPerson()
 {
 return $this->id_person;
@@ -123,6 +139,42 @@ return $this->Departament;
 public function setDepartament($Departament): self
 {
 $this->Departament = $Departament;
+
+return $this;
+}
+
+/**
+ * Get the value of codeid_person
+ */
+public function getCodeidPerson()
+{
+return $this->codeid_person;
+}
+
+/**
+ * Set the value of codeid_person
+ */
+public function setCodeidPerson($codeid_person): self
+{
+$this->codeid_person = $codeid_person;
+
+return $this;
+}
+
+/**
+ * Get the value of dateborn_person
+ */
+public function getDatebornPerson()
+{
+return $this->dateborn_person;
+}
+
+/**
+ * Set the value of dateborn_person
+ */
+public function setDatebornPerson($dateborn_person): self
+{
+$this->dateborn_person = $dateborn_person;
 
 return $this;
 }

@@ -29,13 +29,15 @@ function active(activeA){
     case 'start': 
       add 
       $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
-      $('#departament').removeClass('nav-link active').addClass('nav-link text-white')      
+      $('#departament').removeClass('nav-link active').addClass('nav-link text-white') 
+      $('#person').removeClass('nav-link active').addClass('nav-link text-white')          
       break;  
     case 'trademarck': 
       add 
       let url='../View/Works/Trademarck.php'
       $('#start').removeClass('nav-link active').addClass('nav-link text-white')
-      $('#departament').removeClass('nav-link active').addClass('nav-link text-white')    
+      $('#departament').removeClass('nav-link active').addClass('nav-link text-white')  
+      $('#person').removeClass('nav-link active').addClass('nav-link text-white')       
       loadpage(url)
     break; 
   case 'departament':
@@ -43,8 +45,17 @@ function active(activeA){
     let urld='../View/Works/Departament.php'
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white')  
     $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
+    $('#person').removeClass('nav-link active').addClass('nav-link text-white')     
     loadpage(urld) 
     break;
+  case 'person':
+    add 
+    let urlp='../View/Works/Person.php'
+    $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
+     $('#departament').removeClass('nav-link active').addClass('nav-link text-white')   
+    $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
+    loadpage(urlp) 
+    break;  
   default:
     console.log('default');
 }

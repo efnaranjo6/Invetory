@@ -18,7 +18,25 @@ function setvaluesDepartam(id,name){
     setTimeout(
         function() 
         {
-         $('#nameDepartamenttxt').val(name)
-         $('#idDepartamenttxt').val(id)               
+            $('#nameDepartamenttxt').val(name)
+            $('#idDepartamenttxt').val(id)               
+        }, 1000);  
+}
+function setvaluesPerson(id,name,lastname,code,born,iddepa,ndepar){
+    $('#exampleModal').modal('show')
+    $("#iconModal").removeClass('i').addClass('bi bi-person-lines-fill') 
+    $("#Modalgeneric").load( '../View/Parts/Modals/Person.php')
+    $("#exampleModalLabel").text('People');
+    cargarselect();
+
+    setTimeout(
+        function() 
+        {   
+            $('#idPerson').val(id)
+            $('#nameptxt').val(name)
+            $('#lastnameptxt').val(lastname)  
+             $('#idcodeptxt').val(code);  
+             $('#datebornptxt').val(born);  
+             $('#sldepartament').val(iddepa).change();        
         }, 1000);  
 }
