@@ -40,3 +40,15 @@ function setvaluesPerson(id,name,lastname,code,born,iddepa,ndepar){
              $('#sldepartament').val(iddepa).change();        
         }, 1000);  
 }
+function setvaluesType(id,name){
+    $('#exampleModal').modal('show')
+    $("#iconModal").removeClass('i').addClass('bi bi-pc me-2') 
+    $("#Modalgeneric").load( '../View/Parts/Modals/TypeElement.php')
+    $("#exampleModalLabel").text('Type element');
+    setTimeout(
+        function() 
+        {
+            $('#nameTypetxt').val(name)
+            $('#idTypetxt').val(id)               
+        }, 1000);  
+}

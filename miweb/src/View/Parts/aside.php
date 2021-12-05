@@ -29,10 +29,9 @@
              </a>
          </li>
          <li>
-             <a href="#" onclick="active('5')" class="nav-link text-white">
-                 <svg class="bi me-2" width="16" height="16">
-                     <use xlink:href="#people-circle" /></svg>
-                 Customers
+             <a href="#" id="type" onclick="active('type')" class="nav-link text-white">
+               <i class="bi bi-pc me-2"></i>
+                 Type element
              </a>
          </li>
      </ul>

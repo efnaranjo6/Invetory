@@ -20,7 +20,10 @@ class TypeElement{
     * @ORM\Column(type="string")
     */
     private $name_type;
-
+    public function __construct()
+    {
+    $this->state_type= 'ACTIVE';
+    }
 
     /**
      * Get the value of id_type
