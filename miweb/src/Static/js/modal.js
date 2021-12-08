@@ -52,3 +52,15 @@ function setvaluesType(id,name){
             $('#idTypetxt').val(id)               
         }, 1000);  
 }
+function setvaluesAcquisi(id,name){
+    $('#exampleModal').modal('show')
+    $("#iconModal").removeClass('i').addClass('bi bi-columns-gap') 
+    $("#Modalgeneric").load( '../View/Parts/Modals/Acquisition.php')
+    $("#exampleModalLabel").text('Acquisition');
+    setTimeout(
+        function() 
+        {
+            $('#nameAcquisitiontxt').val(name)
+            $('#idAcquisitiontxt').val(id)               
+        }, 1000);  
+}

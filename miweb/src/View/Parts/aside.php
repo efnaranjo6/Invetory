@@ -34,6 +34,12 @@
                  Type element
              </a>
          </li>
+         <li>
+             <a href="#" id="acquisition" onclick="active('acquisition')" class=" nav-link text-white">
+                 <i class="bi bi-file-earmark-medical me-2"></i>
+                 Acquisition
+             </a>
+         </li>
      </ul>
      
  </div>

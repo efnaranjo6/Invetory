@@ -28,6 +28,7 @@ function active(activeA){
   switch (active) {
     case 'start': 
       add 
+      $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
       $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
       $('#departament').removeClass('nav-link active').addClass('nav-link text-white') 
       $('#person').removeClass('nav-link active').addClass('nav-link text-white')   
@@ -36,6 +37,7 @@ function active(activeA){
     case 'trademarck': 
       add 
       let url='../View/Works/Trademarck.php'
+      $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
       $('#start').removeClass('nav-link active').addClass('nav-link text-white')
       $('#departament').removeClass('nav-link active').addClass('nav-link text-white')  
       $('#person').removeClass('nav-link active').addClass('nav-link text-white')
@@ -45,6 +47,7 @@ function active(activeA){
   case 'departament':
     add 
     let urld='../View/Works/Departament.php'
+    $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white')  
     $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
     $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
@@ -54,6 +57,7 @@ function active(activeA){
   case 'person':
     add 
     let urlp='../View/Works/Person.php'
+    $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#departament').removeClass('nav-link active').addClass('nav-link text-white')   
     $('#start').removeClass('nav-link active').addClass('nav-link text-white') 
@@ -63,12 +67,22 @@ function active(activeA){
   case 'type':
     add 
     let urlt='../View/Works/Type.php'
+    $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#departament').removeClass('nav-link active').addClass('nav-link text-white')   
     $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
     loadpage(urlt) 
-    break;      
+    break;  
+  case 'acquisition':
+    add 
+    let urla='../View/Works/Acquisition.php'
+    $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
+    $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
+    $('#departament').removeClass('nav-link active').addClass('nav-link text-white')   
+    $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
+    loadpage(urla) 
+    break;        
   default:
     console.log('default');
 }
