@@ -31,58 +31,76 @@ function active(activeA){
       $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
       $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
       $('#departament').removeClass('nav-link active').addClass('nav-link text-white') 
-      $('#person').removeClass('nav-link active').addClass('nav-link text-white')   
+      $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
+      $('#element').removeClass('nav-link active').addClass('nav-link text-white')   
       $('#type').removeClass('nav-link active').addClass('nav-link text-white')        
       break;  
     case 'trademarck': 
       add 
-      let url='../View/Works/Trademarck.php'
+      let url='../View/Works/Trademarck.html'
       $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
       $('#start').removeClass('nav-link active').addClass('nav-link text-white')
       $('#departament').removeClass('nav-link active').addClass('nav-link text-white')  
       $('#person').removeClass('nav-link active').addClass('nav-link text-white')
+      $('#element').removeClass('nav-link active').addClass('nav-link text-white')      
       $('#type').removeClass('nav-link active').addClass('nav-link text-white')        
       loadpage(url)
     break; 
   case 'departament':
     add 
-    let urld='../View/Works/Departament.php'
+    let urld='../View/Works/Departament.html'
     $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white')  
     $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
     $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#type').removeClass('nav-link active').addClass('nav-link text-white')     
+    $('#element').removeClass('nav-link active').addClass('nav-link text-white') 
     loadpage(urld) 
     break;
   case 'person':
     add 
-    let urlp='../View/Works/Person.php'
+    let urlp='../View/Works/Person.html'
     $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#departament').removeClass('nav-link active').addClass('nav-link text-white')   
     $('#start').removeClass('nav-link active').addClass('nav-link text-white') 
-    $('#type').removeClass('nav-link active').addClass('nav-link text-white')     
+    $('#type').removeClass('nav-link active').addClass('nav-link text-white') 
+    $('#element').removeClass('nav-link active').addClass('nav-link text-white')      
     loadpage(urlp) 
     break; 
   case 'type':
     add 
-    let urlt='../View/Works/Type.php'
+    let urlt='../View/Works/Type.html'
     $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#departament').removeClass('nav-link active').addClass('nav-link text-white')   
-    $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
+    $('#start').removeClass('nav-link active').addClass('nav-link text-white')
+    $('#element').removeClass('nav-link active').addClass('nav-link text-white')      
     loadpage(urlt) 
     break;  
   case 'acquisition':
     add 
-    let urla='../View/Works/Acquisition.php'
+    let urla='../View/Works/Acquisition.html'
+    $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
+    $('#type').removeClass('nav-link active').addClass('nav-link text-white') 
+    $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
+    $('#departament').removeClass('nav-link active').addClass('nav-link text-white') 
+    $('#element').removeClass('nav-link active').addClass('nav-link text-white')  
+    $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
+    loadpage(urla) 
+    break;
+  case 'element':
+    add 
+    let urle='../View/Works/Element.html'
+    $('#type').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#person').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#trademarck').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#departament').removeClass('nav-link active').addClass('nav-link text-white')   
+    $('#acquisition').removeClass('nav-link active').addClass('nav-link text-white') 
     $('#start').removeClass('nav-link active').addClass('nav-link text-white')     
-    loadpage(urla) 
-    break;        
+    loadpage(urle) 
+    break;            
   default:
     console.log('default');
 }

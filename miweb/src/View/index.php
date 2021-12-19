@@ -142,11 +142,11 @@
    </symbol>
     </svg>
     <?php
-        include '../View/Parts/nav.php';
+        include '../View/Parts/nav.html';
     ?>
     <main>
         <?php
-        include '../View/Parts/aside.php';
+        include '../View/Parts/aside.html';
         ?>
         <div class="container-fluid">
             <div id="selectionpage" >
@@ -159,22 +159,34 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <i class="i" id="iconModal"></i>
-                    <h5 class="modal-title" id="exampleModalLabel">Actions</h5>
+                    <h5 class="ms-2 modal-title" id="exampleModalLabel">Actions</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="Modalgeneric">
                    
                 </div>
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" onclick="UpdateDelete('1')">Delete</button>
-                      <button type="button" class="btn btn-primary" onclick="UpdateDelete('0')">Update</button>
+                      <button 
+                        id='delete' 
+                        type="button" 
+                        class="btn btn-danger" 
+                        onclick="UpdateDelete('1')">
+                        Delete
+                    </button>
+                    <button 
+                        id='update'
+                        type="button" 
+                        class="btn btn-primary"
+                        onclick="UpdateDelete('0')">
+                        Update
+                    </button>
                   </div>
             </div>
         </div>
     </div>
     <script src="../Static/js/jquery.js"></script>
-    <script src="../Static/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="../Static/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    </script> 
     <script src="../Static/datatable/datatables.min.js"></script>
     <script src="../Static/alerts/toastr.min.js"></script>
     <script src="../Static/js/menus.js"></script>

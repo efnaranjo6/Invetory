@@ -41,6 +41,11 @@ class DetailElement{
     /**
      * Get the value of id_detailelement
      */
+
+    public function __construct()
+    {
+    $this->state_detailelement= 'ACTIVE';
+    }     
     public function getIdDetailelement()
     {
         return $this->id_detailelement;

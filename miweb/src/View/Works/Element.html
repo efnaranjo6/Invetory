@@ -1,0 +1,158 @@
+<form class="p-3" id="Element" name="Element" method="post">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <input type="hidden" id="prosecution" name="prosecution" />
+    <input type="hidden" id="modElement" name="modElement" />
+    <input type="hidden" id="serElement" name="serElement" />
+    <input type="hidden" id="obserElement" name="obserElement" />
+    <input type="hidden" id="tradElement" name="tradElement" />
+    <input type="hidden" id="tyElement" name="tyElement" />
+    <input type="hidden" id="acqElement" name="acqElement" />
+    <input type="hidden" id="idElement" name="idElement" />
+    <input type="hidden" id="array" name="array" />
+    <input type="hidden" name="iddt" id="iddt">
+    <input type="hidden" name="componentmd" id="componentmd">
+    <input type="hidden" name="observationmd" id="observationmd">
+    <div class="row mb-4 ">
+        <h1><i class="bi bi-pc-display-horizontal me-2"></i> Element</h1>
+        <hr>
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="form-outline col">
+                    <label class="form-label " for="form6Example1">Model</label>
+                    <input type="text" id="modelElement" name="modelElement" class="form-control" />
+                </div>
+                <div class="form-outline col">
+                    <label class="form-label" for="form6Example1">Serial</label>
+                    <input type="text" id="serialElement" name="serialElement" class="form-control" />
+                </div>
+            </div>
+             <div class="form-outline mb-4">
+                <label class="form-label" for="form6Example1">Observation</label>
+                <textarea class="form-control" placeholder="" id="observationElement"
+                    name="observationElement"></textarea>
+             </div>
+            
+            <div class="row ">
+               
+                <div class="form-outline col">
+                    <label class="form-label" for="form6Example1">Trademarck</label>
+                    <div class="input-group">
+                        <input type="text" id="strade" name="strade" class="form-select ps-0 pe-4" disabled />
+                        <button type="button" class="btn btn-primary " onclick="selectelememt(1)"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="bi bi-zoom-in"></i>
+                        </button>
+                    </div>
+                    <input type="hidden" id="sidtrade" name="sidtrade" />
+                </div>
+                <div class="form-outline col">
+                    <label class="form-label" for="form6Example1">Type element</label>
+                    <div class="input-group">
+                        <input type="text" id="stype" name="stype" class="form-select ps-0 pe-4" disabled />
+                        <button type="button" class="btn btn-primary " onclick="selectelememt(2)"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="bi bi-zoom-in"></i>
+                        </button>
+                    </div>
+                    <input type="hidden" id="sidtype" name="sidtype" />
+                </div>
+                <div class="form-outline col-sm-5 ">
+                    <label class="form-label" for="form6Example1">Acquisition</label>
+                    <div class="input-group">
+                        <input type="text" id="saction" name="saction" class="form-select ps-0 pe-4" disabled />
+                        <button type="button" class="btn btn-primary " onclick="selectelememt(3)"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="bi bi-zoom-in"></i>
+                        </button>
+                    </div>
+                    <input type="hidden" id="sidaction" name="sidaction" />
+                </div>
+                </div>
+                <hr>
+                <h2>Details element</h2>
+                <div class="row">
+                    <div class="form-outline col-sm-5 mt-2">
+                        <label class="form-label" for="form6Example1">Type Componet</label>
+                        <select name="selectype" id="selectype" class="form-select" onchange="componet(1)">
+                        </select>
+                        <input type="hidden" id="tiper" name="tiper">
+                    </div>
+                    <div class="form-outline col-sm-5 mt-2">
+                        <label class="form-label" for="form6Example1">Componet</label>
+                        <select name="selectcomponet" id="selectcomponet" class="form-select" >
+                        </select>  
+                    </div>
+                    <div class="form-outline col-sm-5 mt-2">
+                        <label class="form-label" for="form6Example1">Specifications</label>
+                        <textarea class="form-control" id="specifications"
+                            name="specifications"></textarea>
+                    </div>
+                    </div>
+                <button type="button"  class="btn btn-secondary  mt-2" onclick="tableComponent()">Add component </button>
+                <table id="tablecomponet" class="table table-striped mt-1">
+                    <thead>
+                        <tr>
+                            <th>type</th>
+                            <th>Component</th>
+                            <th>Specifications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+         <hr class="mt-2">
+         <button type="button" onclick="insert()" class="btn btn-primary btn-block mt-1"><i
+                 class="bi bi-device-hdd"></i>
+             Save</button>
+        </div>
+        
+</form>
+<div class=" mt-2" id="trademarcktable">
+    <table id="exampleElement" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Modelo</th>
+                <th>Serial</th>
+                 <th>observation</th>
+                <th>TradeMarck</th>
+                <th>Type elements</th>
+                 <th>acquisition</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+</div>
+<!-- Text input -->
+<!-- Submit button -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Select</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="trademarcktable">
+                
+                <table id="exampleSelect" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Add</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../Static/js/Works/Element.js"></script>

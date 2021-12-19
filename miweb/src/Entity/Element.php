@@ -54,6 +54,10 @@ private $TypeElement;
 */
 private $Acquisition;
 
+public function __construct()
+{
+$this->state_element= 'ACTIVE';
+}
 
 
 /**

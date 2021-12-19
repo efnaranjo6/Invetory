@@ -9,7 +9,7 @@ class Personmodel{
         $Person->setLastnamePerson($lastname);
         $Person->setCodeidPerson($codeid);
         $Person->setDatebornPerson($dateborn);
-        $Person->setDepartament($dep);
+        #$Person->setDepartament($dep);
         $departamenta= array($dep);
         foreach ($departamenta as $departamenId) {
             $depart = $entity->find("Departament", $departamenId);
